@@ -5,6 +5,7 @@ img{
     height: auto;
     max-width: 100%;
 }
+
 #home{
     position: absolute;
     width: 100%;
@@ -53,7 +54,7 @@ svg{
 }
 .shape-bottom{
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     right: 0;
 }
@@ -73,7 +74,7 @@ svg{
     background-color: rgba(255, 255, 255, 0.9);
     transform: translateX(-200%);
     animation: fadeIn ease-in-out 0.2s;
-    transition: transform ease-in-out 0.2s;
+    transition: transform ease 0.2s;
     z-index: 2;
 }
 .nav__mobile{
@@ -86,6 +87,7 @@ svg{
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     transform: translateX(100%);
+    transition-delay: 1s;
     transition: transform ease-in-out 0.3s;
     z-index: 3;
 }
@@ -93,11 +95,21 @@ svg{
     list-style-type: none;
     margin-top: 50px;
 }
+
 .nav__mobile__link{
     display: block;
     text-decoration: none;
     color: rgb(100, 100, 100);
     padding: 8px 0;
+}
+.nav__link-dropdown i{
+    color: #d3d3d3;
+    font-size: 15px;
+    padding-left: 5px;
+}
+.nav__link-dropdown::after{
+    display: inline-block;
+    content: counter(#fa-caret-down);
 }
 .nav__mobile__list hr{
     position: relative;
@@ -109,9 +121,9 @@ svg{
 }
 .nav__mobile-close{
     color: rgb(100, 100, 100);
-    font-size: 23px;
+    font-size: 25px;
     position: absolute;
-    top: 5px;
+    top: 18px;
     right: 20px;
 }
 .nav__input{
@@ -153,6 +165,7 @@ svg{
     flex: 1;
     justify-content: center;
     align-items: center;
+    transition-duration: 1s;
     animation: RtoL ease-in-out 1.2s;
 }
 .home__content-cl2 img{
@@ -161,6 +174,7 @@ svg{
 .home__content-img{
     display: flex;
     width: 190px;
+    margin-top: 40px;
 }
 .home__content-img img{
     padding-right: 10px;
@@ -172,7 +186,7 @@ svg{
 @keyframes RtoL {
     from {
         opacity: 0;
-        transform: translateX(25%);
+        transform: translateX(22%);
     }
     to{
         opacity: 1;
