@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="./Images/logo-purple.png">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="icon" type="image/x-icon" href="./img/logo-purple.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); </style>
     <title>Landing_page</title>
@@ -13,106 +14,189 @@
 <body>
     <div class="main">
         <section class="section" id="home">
-            <div class="home__overlay"></div>
-            <header class="navbar">
-                <!-- nav for PC -->
-                <a class="nav__brand" href="index.html">
-                    <img src="./Images/logo-white.png" alt="logo_brand">
-                </a>
-                <nav class="nav__pc">
-                    <ul class="nav__list">
-                        <li>
-                            <a href="" class="nav__link nav__link-dropdown">Home
-                                <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="nav__link">Features</a>
-                        </li>
-                        <li>
-                            <a href="" class="nav__link nav__link-dropdown">Pages
-                                <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="nav__link">Screenshots</a>
-                        </li>
-                        <li>
-                            <a href="" class="nav__link">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="" class="nav__link">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-                <label for="nav-mobile-input" class="nav__bars-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </label>
-                <input type="checkbox" name="" class="nav__input" id="nav-mobile-input">
-                <label for="nav-mobile-input" class="nav__overlay"></label>
-                <nav class="nav__mobile">
-                    <label for="nav-mobile-input" class="nav__mobile-close">
-                        <i class="fa-solid fa-xmark"></i>
+            <div class="container grid wide">
+                <div class="home__overlay"></div>
+                <header class="row navbar">
+                    <!-- nav for PC -->
+                    <a class="nav__brand" href="index.html">
+                        <img src="./img/logo-white.png" alt="logo_brand">
+                    </a>
+                    <nav class="nav__pc">
+                        <ul class="row nav__list">
+                            <li class="nav__link-dropdown">
+                                <a href="" class="nav__link nav__link-dropdown">Home
+                                    <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
+                                    
+                                    <ul class="navhome__dropdown-menu">
+                                        <i class="fa-sharp fa-solid fa-triangle"></i>
+                                        <li>HOMEPAGE-1</li>
+                                        <li>HOMEPAGE-2</li>
+                                        <li>HOMEPAGE-3</li>
+                                        <li>HOMEPAGE-4</li>
+                                        <li>HOMEPAGE-5</li>
+                                        <li>HOMEPAGE-6</li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav__link">Features</a>
+                            </li>
+                            <li>
+                                <a href="" class="nav__link nav__link-dropdown">Pages
+                                    <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav__link">Screenshots</a>
+                            </li>
+                            <li>
+                                <a href="" class="nav__link">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="" class="nav__link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <label for="nav-mobile-input" class="nav__bars-btn">
+                        <i class="fa-solid fa-bars"></i>
                     </label>
-                    <ul class="nav__mobile__list">
-                        <li>
-                            <a href="" class="nav__mobile__link nav__link-dropdown">Home
-                                <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
-                            </a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a href="" class="nav__mobile__link">Features</a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a href="" class="nav__mobile__link nav__link-dropdown">Pages
-                                <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
-                            </a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a href="" class="nav__mobile__link">Screenshots</a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a href="" class="nav__mobile__link">Pricing</a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a href="" class="nav__mobile__link">Contact</a>
-                        </li>
-                        <hr>
-                    </ul>
-                </nav>
-            </header>
-            <div class="home__content">
-                <div class="home__content-cl1">
-                    <h1>Make cool Landing pages with sApp</h1>
-                    <p class="home__content-cl1-detail1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nihil tenetur minus quidem est deserunt molestias accusamus harum ullam tempore debitis et, expedita, repellat delectus aspernatur neque itaque qui quod.</p>
-                    <div class="home__content-img">
-                        <img src="./Images/google-play.png" alt="">
-                        <img src="./Images/app-store.png" alt="">
+                    <input type="checkbox" name="" class="nav__input" id="nav-mobile-input">
+                    <label for="nav-mobile-input" class="nav__overlay"></label>
+                    <nav class="nav__mobile">
+                        <label for="nav-mobile-input" class="nav__mobile-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </label>
+                        <ul class="nav__mobile__list">
+                            <li>
+                                <a href="" class="nav__mobile__link nav__link-dropdown">Home
+                                    <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="" class="nav__mobile__link">Features</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="" class="nav__mobile__link nav__link-dropdown">Pages
+                                    <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="" class="nav__mobile__link">Screenshots</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="" class="nav__mobile__link">Pricing</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="" class="nav__mobile__link">Contact</a>
+                            </li>
+                            <hr>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="home__content">
+                    <div class="home__content-cl1">
+                        <h1>Make cool Landing pages with sApp</h1>
+                        <p class="home__content-cl1-detail1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nihil tenetur minus quidem est deserunt molestias accusamus harum ullam tempore debitis et, expedita, repellat delectus aspernatur neque itaque qui quod.</p>
+                        <div class="home__content-img">
+                            <img src="./img/google-play.png" alt="">
+                            <img src="./img/app-store.png" alt="">
+                        </div>
+                        <p class="home__content-cl1-detail2">* Available on iPhone, iPad and all Android devices</p>
                     </div>
-                    <p class="home__content-cl1-detail2">* Available on iPhone, iPad and all Android devices</p>
+                    <div class="home__content-cl2">
+                        <img src="./img/welcome-mockup.png" alt="">
+                    </div>
                 </div>
-                <div class="home__content-cl2">
-                    <img src="./Images/welcome-mockup.png" alt="">
+                <div class="shape-bottom">
+                    <svg viewBox="0 0 1920 310" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg replaced-svg">
+                        <title>sApp Shape</title>
+                        <desc>Created with Sketch</desc>
+                        <defs></defs>
+                        <g id="sApp-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="sApp-v1.0" transform="translate(0.000000, -554.000000)" fill="#FFFFFF">
+                                <path d="M-3,551 C186.257589,757.321118 319.044414,856.322454 395.360475,848.004007 C509.834566,835.526337 561.525143,796.329212 637.731734,765.961549 C713.938325,735.593886 816.980646,681.910577 1035.72208,733.065469 C1254.46351,784.220361 1511.54925,678.92359 1539.40808,662.398665 C1567.2669,645.87374 1660.9143,591.478574 1773.19378,597.641868 C1848.04677,601.75073 1901.75645,588.357675 1934.32284,557.462704 L1934.32284,863.183395 L-3,863.183395" id="sApp-v1.0"></path>
+                            </g>
+                        </g>
+                    </svg>
                 </div>
             </div>
-            <div class="shape-bottom">
-                <svg viewBox="0 0 1920 310" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg replaced-svg">
-                    <title>sApp Shape</title>
-                    <desc>Created with Sketch</desc>
-                    <defs></defs>
-                    <g id="sApp-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="sApp-v1.0" transform="translate(0.000000, -554.000000)" fill="#FFFFFF">
-                            <path d="M-3,551 C186.257589,757.321118 319.044414,856.322454 395.360475,848.004007 C509.834566,835.526337 561.525143,796.329212 637.731734,765.961549 C713.938325,735.593886 816.980646,681.910577 1035.72208,733.065469 C1254.46351,784.220361 1511.54925,678.92359 1539.40808,662.398665 C1567.2669,645.87374 1660.9143,591.478574 1773.19378,597.641868 C1848.04677,601.75073 1901.75645,588.357675 1934.32284,557.462704 L1934.32284,863.183395 L-3,863.183395" id="sApp-v1.0"></path>
-                        </g>
-                    </g>
-                </svg>
+        </section>
+        <section class="section" id="counter-number">
+            <div class=" counter-number__content container grid wide">
+                <div class="row counter-number-row">
+                    <div class="col l-3 m-6 c-6 counter-number-col">
+                        <div class="col_number">
+                            <span class="count-num" id="users-count">10</span>
+                            <span>M</span>
+                        </div>
+                        <p>Users</p>
+                    </div>
+                    
+                    <div class="col l-3 m-6 c-6 counter-number-col">
+                        <div class="col_number">
+                            <span class="count-num" id="download-count">23</span>
+                            <span>K</span>
+                        </div>
+                        <p>Download</p>
+                    </div>
+                    
+                    <div class="col l-3 m-6 c-6 counter-number-col">
+                        <div class="col_number">
+                            <span class="count-num" id="customer-count">9</span>
+                            <span>M</span>
+                        </div>
+                        <p>Customer</p>
+                    </div>
+                    <div class="col l-3 m-6 c-6 counter-number-col">
+                        <div class="col_number">
+                            <span class="count-num" id="developer-count">12</span>
+                            <span>K</span>
+                        </div>
+                        <p>Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="features">
+            <div class="container grid wide">
+                <div class="row l-12 text-center feature__header">
+                    <div class="feature__btn">
+                        <i class="fa-regular fa-lightbulb"></i>
+                        &nbsp;Premium <b>&nbsp;Features</b></div>
+                    <h1 class="feature-header">What Makes sApp Different?</h1>
+                    <p class="feature-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
+                </div>
+                <div class="row text-center">
+                    <div class="col l-4 c-12 m-12 features__item">
+                        <div class="features__item-content">
+                            <img src="./img/layers.png" alt="">
+                        <h4>Fully functional</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-12 features__item">
+                        <div class="features__item-content">
+                            <img src="./img/speak.png" alt="">
+                        <h4>Live Chat</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-12 features__item">
+                        <div class="features__item-content">
+                            <img src="./img/lock.png" alt="">
+                        <h4>Secure Data</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

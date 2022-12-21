@@ -1,18 +1,36 @@
 .main{
     color: #444;
+    font-size: 17px;
     font-family: 'Poppins', sans-serif;
     position: relative;
+    z-index: -99;
+}
+h1 h2 h3 h4 h5 h6 {
+    color: #222;
+}
+body{
+    position: relative;
+    z-index: -99;
+    margin: 0;
 }
 *{
     box-sizing: border-box;
 }
-
+img{
+    height: auto;
+    max-width: 100%;
+}
+.text-center{
+    text-align: center;
+}
 #home{
-    position: absolute;
+    position: relative;
+    top: 0;
     width: 100%;
     color: #fff;
+    padding-bottom: 80px;
     background-color: #3333;
-    background-image: url(./img/welcome-bg.jpg);
+    background-image: url(../../img/welcome-bg.jpg);
     background-size: cover;
     background-position: center;
     z-index: -2;
@@ -23,30 +41,52 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, rgba(51, 30, 238, 0.7), rgba(113, 25, 236, 0.95));
-    z-index: -1;
+    background-image: linear-gradient(to bottom, rgba(89, 39, 238, 0.9), rgba(113, 25, 236, 0.95));
+    z-index: -2;
 }
 .navbar{
-    position: absolute;
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 13.5% 0 13.5%;
-    z-index: 999;
 }
 .nav__brand{
     margin-top: 20px;
 }
 .nav__list{
-    display: flex;
     list-style-type: none;
     margin-top: 30px;
 }
 .nav__link{
     color: #fff;
-    font-size: 16px;
     padding: 20px;
     text-decoration: none;
+}
+.nav__link-dropdown i{
+    font-size: 15px;
+    padding-left: 5px;
+}
+.navhome__dropdown-menu{
+    position: fixed;
+    top: 80px;
+    z-index: 3;
+    padding: 20px 100px 0 15px;
+    list-style-type: none;
+    border-radius: 2%;
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transform: translateY(25%);
+    transition: 0.3s;
+    visibility: hidden;
+}
+.navhome__dropdown-menu li{
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 13px;
+    font-weight: 700;
+    padding-bottom: 18px;
+}
+.nav__link-dropdown:hover .navhome__dropdown-menu{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);
 }
 .navbar-sticky{
     position: fixed;
@@ -55,14 +95,16 @@
     top: 0;
     left: 0;
     right: 0;
-    transition-duration: 1s;
-    animation: TtoB ease 0.5s;
+    animation: TtoB 0.1s;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     height: 80px;
-    padding-bottom: 20px;
+    z-index: 99;
+    margin: 0 auto;
+    padding: 0 14vw 6vw 14vw;
+    animation: TtoB 0.3s ease;
 }
 .navbar-sticky img{
-    content: url(./img/logo-purple.png);
+    content: url(../../img/logo-purple.png);
     margin-top: 0;
 }
 .navbar-sticky a{
@@ -107,6 +149,7 @@ svg{
     transition: fadeIn ease-in-out 5s;
     transition: all ease 0.2s;
     z-index: 2;
+    cursor: pointer;
 }
 .nav__mobile{
     position: fixed;
@@ -133,15 +176,6 @@ svg{
     color: rgb(100, 100, 100);
     padding: 8px 0;
 }
-.nav__link-dropdown i{
-    color: #d3d3d3;
-    font-size: 15px;
-    padding-left: 5px;
-}
-.nav__link-dropdown::after{
-    display: inline-block;
-    content: counter(#fa-caret-down);
-}
 .nav__mobile__list hr{
     position: relative;
     left: -40px;
@@ -156,6 +190,7 @@ svg{
     position: absolute;
     top: 18px;
     right: 20px;
+    cursor: pointer;
 }
 .nav__input{
     display: none;
@@ -178,10 +213,9 @@ svg{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 0 13.5% 0 13.5%;
 }
 .home__content h1{
-    font-size: 64px;
+    font-size: 66px;
     font-weight: 600;
     line-height: 75px;
     margin-bottom: 0;
@@ -227,30 +261,134 @@ svg{
 }
 #counter-number{
     position: relative;
+    text-align: center;
+    z-index: -3;
+    width: 100%;
     background-color: rgb(255, 255, 255);
 }
-.container{
-    width: 100%;
-    height: 1000px;
+.counter-number-row{
+    margin-top: 80px;
 }
-
+.counter__line{
+    width: 1px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+.counter-number-col .col_number{
+    color: #602ce1;
+    font-size: 47px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+.counter-number-col p{
+    color: #222222;
+    font-size: 20px;
+    font-weight: 600;
+}
+#features{
+    position: relative;
+    z-index: -3;
+    padding-bottom: 10000px;
+}   
+.feature__btn{
+    color: #7c4fe0;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    padding: 8px 0 8px 0;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.feature__header p{
+    padding: 0 18% 0 18%;
+}
+.feature__header b{
+    font-weight: 500;
+    color: #222222;
+}
+.feature-header{
+    margin-top: 30px;
+    font-size: 47px;
+    font-weight: 600;
+    color: #222222;
+}
+.feature-header::after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 2.5px;
+    background-color: #7c4fe0;
+    margin: 0 auto;
+}
+.feature-header__line{
+    width: 100%;
+    height: 5px;
+    color: #7c4fe0;
+}
+.feature-header::before{
+    display: inline-block;
+    content: counter(.feature-header__line);
+}
+.features__item{
+    margin-top: 40px;
+}
+.features__item-content{
+    transform: translateY(3%);
+    transition: 0.3s;
+}
+.features__item-content:hover{
+    transform: translateY(0%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.features__item-content{
+    border-radius: 5%;
+    padding: 38px 0px 24px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.features__item-content p{
+    padding: 0 10% 0 10%;
+    font-size: 17px;
+}
+.features__item-content h4{
+    color: #222;
+    font-size: 22px;
+    margin: 10px;
+}
+.features__item img{
+    width: 55px;
+    height: auto;
+}
 /* Mobile and Tablet */
-@media only screen and (max-width: 85.375em){
-    .navbar{
-        padding: 0 5% 0 5%;
+@media only screen and (max-width: 85.37em){
+    .section{
+        padding: 0 5% 3.5% 5%;
+    }
+    #home{
+        padding-bottom: 0;
     }
     .navbar-sticky{
+        padding: 0 5% 11vh 5%;
         height: 65px;
-        padding-bottom: 17px;
     }
     .home__content{
-        padding: 0 5% 0 5%;
         margin-bottom: 0;
     }
     .home__content h1{
         line-height: 65px;
     }
-    
+    .home__content-cl1-detail2{
+        font-size: 15px;
+    }
+    .feature-header{
+        font-size: 25px;
+        margin: 20px auto;
+    }
 }
 /* Mobile */
 @media only screen and (max-width: 46.1875em){
