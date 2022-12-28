@@ -79,3 +79,49 @@ document.addEventListener("DOMContentLoaded",function() {
 		}
 	})
 	})
+
+
+// slick slider
+$(document).ready(function () {
+    $(".image-slider").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      draggable: false,
+      prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
+      nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+            infinite: false,
+          },
+        },
+      ],
+      // autoplay: true,
+      // autoplaySpeed: 1000,
+    });
+  });
+
+//auto slide
+window.onload=function(){
+	$('.slider').slick({
+	autoplay:true,
+	autoplaySpeed:1500,
+	arrows:true,
+	centerMode:true,
+	slidesToShow:3,
+	slidesToScroll:2
+	});
+  };
+  

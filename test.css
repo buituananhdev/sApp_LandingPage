@@ -1,0 +1,37 @@
+.work__step2::after{
+    width: 50px;
+    position: absolute;
+    top: -100%;
+    left: 64%;
+    content: '\f054';
+    font-size: 45px;
+    font-weight: 900;
+    color: var(--white-color);
+    font-family: 'Font Awesome 5 Free';
+    top: 50%;
+    right: 0;
+    margin-right: -50px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.work__step1::after {
+    position: relative;
+    content: '\f054';
+    font-size: 45px;
+    font-weight: 900;
+    color: var(--white-color);
+    font-family: 'Font Awesome 5 Free';
+    top: 50%;
+    right: 0;
+    margin-right: -50px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
