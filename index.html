@@ -26,6 +26,9 @@
 </head>
 <body>
     <div class="main">
+        <div id="scrollUp" onclick="topFunction()">
+            <svg class="svg-inline--fa fa-arrow-up fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
+        </div>
         <section class="section" id="home">
             <div class="container grid wide">
                 <div class="home__overlay"></div>
@@ -148,7 +151,7 @@
                         </div>
                         <p>Users</p>
                     </div>
-                    
+                    <div class="counter_line"></div>
                     <div class="col l-3 m-6 c-6 counter-number-col">
                         <div class="col_number">
                             <span class="count-num" id="download-count">23</span>
@@ -156,7 +159,7 @@
                         </div>
                         <p>Download</p>
                     </div>
-                    
+                    <div class="counter_line"></div>
                     <div class="col l-3 m-6 c-6 counter-number-col">
                         <div class="col_number">
                             <span class="count-num" id="customer-count">9</span>
@@ -164,6 +167,7 @@
                         </div>
                         <p>Customer</p>
                     </div>
+                    <div class="counter_line"></div>
                     <div class="col l-3 m-6 c-6 counter-number-col">
                         <div class="col_number">
                             <span class="count-num" id="developer-count">12</span>
@@ -187,22 +191,22 @@
                     <div class="col l-4 c-12 m-12 features__item">
                         <div class="features__item-content">
                             <img src="./img/layers.png" alt="">
-                        <h4>Fully functional</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.</p>
+                            <h4>Fully functional</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.</p>
                         </div>
                     </div>
                     <div class="col l-4 c-12 m-12 features__item">
                         <div class="features__item-content">
                             <img src="./img/speak.png" alt="">
-                        <h4>Live Chat</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.</p>
+                            <h4>Live Chat</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.</p>
                         </div>
                     </div>
                     <div class="col l-4 c-12 m-12 features__item">
                         <div class="features__item-content">
                             <img src="./img/lock.png" alt="">
-                        <h4>Secure Data</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.</p>
+                            <h4>Secure Data</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.</p>
                         </div>
                     </div>
                 </div>
@@ -434,6 +438,172 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="section" id="price-area">
+            <div class="container grid wide">
+                <div class="row l-12 m-12 c-12 text-center feature__header">
+                    <h1 class="feature-header header">Unlock Full Power Of sApp</h1>
+                    <p class="feature-content content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
+                </div>
+                <div class="price__list row text-center">
+                    <div class="price__item price__item1 col l-6 m-12 c-12">
+                        <div class="price__item-content">
+                            <img src="./img/basic.png" alt="">
+                            <h2 class="price__name">BASIC</h2>
+                            <div class="price">
+                                <small>$</small>
+                                49
+                            </div>
+                            <ul class="list-features">
+                                <li>5GB Linux Web Space</li>
+                                <li>5 MySQL Databases</li>
+                                <li>24/7 Tech Support</li>
+                                <li>Daily Backups</li>
+                            </ul>
+                        </div>
+                        <button>Sign Up</button>
+                    </div>
+                    <div class="price__item price__item2 col l-6 m-12 c-12">
+                        <div class="price__item-content">
+                            <img src="./img/premium.png" alt="">
+                        <h2 class="price__name">PRO</h2>
+                        <div class="price">
+                            <small>$</small>
+                            129
+                        </div>
+                        <ul class="list-features">
+                            <li>10GB Linux Web Space</li>
+                            <li>50 MySQL Databases</li>
+                            <li>Unlimited Email</li>
+                            <li>Daily Backups</li>
+                        </ul>
+                        </div>
+                        <button>Sign Up</button>
+                    </div>
+                </div>
+                <span class="contact-us text-center">
+                    <p>Not sure what to choose?</p>
+                    <p class="text-under-line">Contact Us</p>
+                </span>
+            </div>
+        </section>
+        <section class="section" id="questions">
+            <div class="container grid wide">
+                <div class="row l-12 m-12 c-12 text-center feature__header">
+                    <h1 class="feature-header header">Frequently Asked Questions</h1>
+                    <p class="feature-content content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
+                </div>
+                <div class="question__list row">
+                    <div class="question-item col l-6">
+                        <ul>
+                            <li class="list-header">How to install sApp?</li>
+                            <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</li>
+                            <li class="list-header">Can I get support from the Author?</li>
+                            <li>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</li>
+                            <li class="list-header">Do you have a free trail?</li>
+                            <li>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+                        </ul>
+                    </div>
+                    <div class="question-item col l-6">
+                        <ul>
+                            <li class="list-header">How can I edit my personal information?</li>
+                            <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</li>
+                            <li class="list-header">Contact form isn't working?</li>
+                            <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</li>
+                            <li class="list-header">Contact form isn't working?</li>
+                            <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="contact-us text-center">
+                    <p>Haven't find suitable answer?</p>
+                    <p class="text-under-line"> Tell us what you need.</p>
+                </span>
+            </div>
+        </section>
+        <section class="section" id="team">
+            <div class="container grid wide">
+                <div class="row l-12 m-12 c-12 text-center download__header">
+                    <h1 class="feature-header header">Our Team Experts</h1>
+                    <p class="features-content content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati.</p>
+                </div>
+                <div class="row">
+                    <div class="team-image col l-3 m-6 c-12">
+                        <div class="image_container">
+                            <img src="./img/avatar-1.png" alt="" class="avatar">
+                            <div class="team-image-overlay text-center">
+                                <p class="avatar-1__name">Junaid Hasan</p>
+                                <p class="avatar-1__work">Founder & CEO</p>
+                                <span class="social">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <i class="fa-brands fa-twitter"></i>
+                                    <i class="fa-brands fa-google"></i>
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-image col l-3 m-6 c-12">
+                        <div class="image_container">
+                            <img src="./img/avatar-2.png" alt=""  class="avatar">
+                            <div class="team-image-overlay text-center">
+                                <p class="avatar-1__name">Junaid Hasan</p>
+                                <p class="avatar-1__work">Founder & CEO</p>
+                                <span class="social">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <i class="fa-brands fa-twitter"></i>
+                                    <i class="fa-brands fa-google"></i>
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-image col l-3 m-6 c-12">
+                        <div class="image_container">
+                            <img src="./img/avatar-3.png" alt=""  class="avatar">
+                            <div class="team-image-overlay text-center">
+                                <p class="avatar-1__name">Junaid Hasan</p>
+                                <p class="avatar-1__work">Founder & CEO</p>
+                                <span class="social">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <i class="fa-brands fa-twitter"></i>
+                                    <i class="fa-brands fa-google"></i>
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-image col l-3 m-6 c-12">
+                        <div class="image_container">
+                            <img src="./img/avatar-4.png" alt=""  class="avatar">
+                            <div class="team-image-overlay text-center">
+                                <p class="avatar-1__name">Junaid Hasan</p>
+                                <p class="avatar-1__work">Founder & CEO</p>
+                                <span class="social">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <i class="fa-brands fa-twitter"></i>
+                                    <i class="fa-brands fa-google"></i>
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="download">
+            <div class="container grid wide">
+                <div class="row l-12 m-12 c-12 text-center download__content">
+                    <h1 class="download-header header">sApp is available for all devices</h1>
+                    <p class="feature-content content">sApp is available for all devices, consectetur adipisicing elit. Itaque at harum quam explicabo. Aliquam optio, delectus, dolorem quod neque eos totam. Delectus quae animi tenetur voluptates doloribus commodi dicta modi aliquid deserunt, quis maiores nesciunt autem, aperiam natus.</p>
+                    <img src="./img/google-play.png" alt="">
+                    <img src="./img/app-store.png" alt="">
+                    <p class="home__content-cl1-detail2">* Available on iPhone, iPad and all Android devices</p>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="subcribe">
+
         </section>
     </div>
     <script

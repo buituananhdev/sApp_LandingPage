@@ -1,9 +1,13 @@
+*{
+    box-sizing: border-box;
+}
 .main{
     color: #444;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     position: relative;
     z-index: -99;
+    cursor: default;
 }
 :root{
     --white: #ffffff;
@@ -29,6 +33,26 @@
     --light: #f8f9fa;
     --dark: #343a40;
     --black: rgb(21, 21, 21);
+    --primary-color: #565656;
+    --primary-color-2: #7c4fe0;
+    --secondary-color: #666;
+    --secondary-color-2: #777;
+    --social-color-1: #3b5999;
+    --social-color-2: #55acee;
+    --social-color-3: #dd4b39;
+    --social-color-4: #00b489;
+    --white-color: #ffffff;
+    --primary-t-color: #222;
+    --primary-p-color: #565656;
+    --primary-l-color: rgba(0, 0, 0, 0.12);
+    --secondary-l-color: rgba(45, 49, 54, 0.09);
+    --valid-color: #28a745;
+    --invalid-color: #ffa200;
+    --primary-bg-color: #f6f9fe;
+    --primary-bg-color-2: linear-gradient(-47deg, #8731E8 0%, #4528DC 100%);
+    --primary-bg-color-3: #ffffff;
+    --primary-bg-color-4: rgb(48, 44, 50);
+    --nav-bg-color: #d3d3d3;
 }
 
 .header{
@@ -42,9 +66,21 @@
     margin: auto;
     width: 65%;
 }
+.list-header{
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.text-under-line{
+    text-decoration: underline;
+    cursor: pointer;
+}
 h1 h2 h3 h4 h5 h6 {
     color: #2222;
 }
+
 a{
     text-decoration: none;
 }
@@ -59,9 +95,6 @@ body{
     z-index: -999;
     margin: 0;
 }
-*{
-    box-sizing: border-box;
-}
 img{
     height: auto;
     max-width: 100%;
@@ -70,6 +103,19 @@ img{
     display: flex;
     justify-content: center;
     text-align: center;
+}
+#scrollUp{
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.468);
+    padding: 7px;
+    border-radius: 6px;
+    color: var(--white);
+}
+#scrollUp svg{
+    width: 25px;
 }
 #home{
     position: relative;
@@ -330,9 +376,15 @@ svg{
     margin-top: 80px;
 }
 .counter__line{
-    width: 1px;
+    position: absolute;
+    z-index: 10;
+    width: 3px;
     height: 80px;
-    background-color: rgba(0, 0, 0, 0.2)
+    background-color: rgb(0, 0, 0)
+}
+.users-count::after{
+    display: block;
+    content: counter(.counter_line);
 }
 .counter-number-col .col_number{
     color: #602ce1;
@@ -687,8 +739,194 @@ li{
     font-weight: 600;
     margin-top: 0;
 }
+#price-area{
+    position: relative;
+    z-index: -10;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #f6f9fe;
+}
+.price__list{
+    margin-top: 80px;
+}
+.price__item-content{
+    border-radius: 15px;
+    padding: 20px 0px 20px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.price__item{
+    max-width: 375px !important;
+}
+.price__item button{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--indigo);
+    line-height: 1;
+    text-align: center;
+    padding: 18px 30px;
+    border: 0 none;
+    border-radius: 6px;
+    outline: 0 none;
+    position: relative;
+    top: -25px;
+    z-index: 1;
+}
+.price__item img{
+    padding-top: 30px;
+    width: 80px;
+    height: auto;
+}
+.price__name{
+    margin-top: 0;
+    letter-spacing: 3px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+.price{
+    position: relative;
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--indigo);
+}
+.list-features{
+    position: relative;
+    padding: 0;
+    padding-bottom: 20px;
+}
+.list-features li{
+    font-size: 15px;
+    opacity: 0.9;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.price::after{
+    content: "";
+    display: block;
+    width: 260px;
+    height: 0.5px;
+    background-color: rgba(194, 178, 178, 0.693);
+    position: absolute;
+    left: 12%;
+    margin-top: 15px;
+}
+.list-features li::after{
+    content: "";
+    display: block;
+    width: 260px;
+    height: 1px;
+    background-color: rgba(181, 167, 167, 0.712);
+    position: absolute;
+    left: 12%;
+    margin-top: 15px;
+}
+#questions{
+    position: relative;
+    z-index: -10;
+    padding-top: 4%;
+    padding-bottom: 5%;
+}
+.contact-us p{
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 500;
+    margin-top: 50px;
+    margin-left: 3px;
+}
+.question__list{
+    margin-top: 50px;
+}
+#team{
+    position: relative;
+    z-index: -10;
+    padding-top: 4%;
+    padding-bottom: 8%;
+}
+.team-image{
+    overflow: hidden;
+}
+.image_container{
+    overflow: hidden;
+    position: relative;
+    height: 269px;
+    border-radius: 15px;
+}
+.avatar{
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.3s ease 0s;
+}
+.download__header{
+    margin-bottom: 80px;
+}
+.team-image-overlay{
+    border-radius: 15px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(119, 0, 255, 0.8);
+    transform: scale(0);
+    transition: all 0.3s ease 0s;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+}
+.image_container:hover .team-image-overlay{
+    transform: scale(1);
+}
+.image_container:hover .avatar{
+    transform: scale(1.2);
+}
+.avatar-1__name{
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.avatar-1__work{
+    margin-top: 0;
+    font-weight: 600;
+}
+.social i{
+    padding: 7px;
+   
+}
+#download{
+    position: relative;
+    z-index: -10;
+    padding-top: 4%;
+    padding-bottom: 27%;
+    background-image: url(../../img/download-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.download__content{
+    position: absolute;
+    color: var(--white);
+    background-color: rgba(53, 18, 60, 0.8);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 !important;
+    padding-top: 3%;
+    padding-bottom: 4%;
+}
+.download__content img{
+    width: 190px;
+    margin-top: 30px;
+}
+#subcribe{
+    position: relative;
+    z-index: -10;
+    padding-top: 4%;
+    padding-bottom: 8%;
+}
 /* Mobile */
-@media only screen and (max-width: 599px){
+@media only screen and (max-width: 600px){
     .home__content{
         flex-direction: column;
     }
@@ -728,6 +966,9 @@ li{
     }
     .review{
         height: 430px !important;
+    }
+    .team-image{
+        margin-bottom: 25px;
     }
 }
 /* Tablet */

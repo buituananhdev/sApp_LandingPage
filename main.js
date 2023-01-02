@@ -1,3 +1,23 @@
+// Get the button
+let mybutton = document.getElementById("scrollUp");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 // Hàm bắt sự kiện scroll hiện navbar 
 document.addEventListener("DOMContentLoaded",function() {
 var menu = document.querySelectorAll('header.navbar');
@@ -89,8 +109,6 @@ $(document).ready(function () {
       infinite: true,
       arrows: true,
       draggable: false,
-      prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
-      nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
       dots: true,
       responsive: [
         {
@@ -108,20 +126,8 @@ $(document).ready(function () {
           },
         },
       ],
-      // autoplay: true,
-      // autoplaySpeed: 1000,
+      autoplay: true,
+      autoplaySpeed: 1000,
     });
   });
 
-//auto slide
-window.onload=function(){
-	$('.slider').slick({
-	autoplay:true,
-	autoplaySpeed:1500,
-	arrows:true,
-	centerMode:true,
-	slidesToShow:3,
-	slidesToScroll:2
-	});
-  };
-  
