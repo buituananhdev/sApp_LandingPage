@@ -13,10 +13,20 @@ function scrollFunction() {
 }
 
 // When the user clicks on the button, scroll to the top of the document
+let offset = 500;
+let duration = 350;
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+	window.addEventListener("scrollUp",function(){
+		if ($(this).scrollTop() > offset)
+			$('#scrollUp').fadeIn(duration);
+		else
+			$('#scrollUp').fadeOut(duration);
+		});
+		$('#scrollUp').click(function () {
+		$('body,html').animate({scrollTop: 0}, 500);
+		});
 }
+
 
 // Hàm bắt sự kiện scroll hiện navbar 
 document.addEventListener("DOMContentLoaded",function() {
@@ -107,8 +117,8 @@ $(document).ready(function () {
       slidesToShow: 4,
       slidesToScroll: 1,
       infinite: true,
-      arrows: true,
-      draggable: false,
+      arrows: false,
+      draggable: true,
       dots: true,
       responsive: [
         {
@@ -127,7 +137,7 @@ $(document).ready(function () {
         },
       ],
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 700,
     });
   });
 

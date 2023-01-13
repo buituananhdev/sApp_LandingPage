@@ -43,7 +43,9 @@
                                 <a href="" class="nav__link nav__link-dropdown">Home
                                     <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
                                     <ul class="nav__dropdown-menu">
-                                        <i class="fa-sharp fa-solid fa-caret-down"></i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                          </svg>
                                         <li>HOMEPAGE-1</li>
                                         <li>HOMEPAGE-2</li>
                                         <li>HOMEPAGE-3</li>
@@ -59,6 +61,23 @@
                             <li>
                                 <a href="" class="nav__link nav__link-dropdown">Pages
                                     <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
+                                    <ul class="nav__dropdown-menu">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                          </svg>
+                                        <li>INNER PAGES
+                                            <span class="new-text">New</span>
+                                        </li>
+                                        <li>BLOG PAGES</li>
+                                        <li>BLOG DETAILS</li>
+                                        <li>ACCOUNTS
+                                            <span class="new-text">New</span>
+                                        </li>
+                                        <li>REVIEWS</li>
+                                        <li>FAQ</li>
+                                        <li>CONTACT</li>
+                                        <li>MORE COMMING SOON</li>
+                                    </ul>
                                 </a>
                             </li>
                             <li>
@@ -117,9 +136,9 @@
                     <div class="home__content-cl1">
                         <h1>Make cool Landing pages with sApp</h1>
                         <p class="home__content-cl1-detail1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nihil tenetur minus quidem est deserunt molestias accusamus harum ullam tempore debitis et, expedita, repellat delectus aspernatur neque itaque qui quod.</p>
-                        <div class="home__content-img">
-                            <img src="./img/google-play.png" alt="">
-                            <img src="./img/app-store.png" alt="">
+                        <div class="home__content-img row">
+                            <a href="/"><img src="./img/google-play.png" alt=""></a>
+                            <a href="/"><img src="./img/app-store.png" alt=""></a>
                         </div>
                         <p class="home__content-cl1-detail2">* Available on iPhone, iPad and all Android devices</p>
                     </div>
@@ -145,7 +164,7 @@
             <div class=" counter-number__content container grid wide">
                 <div class="row counter-number-row">
                     <div class="col l-3 m-6 c-6 counter-number-col">
-                        <div class="col_number">
+                        <div class="col_number border_right">
                             <span class="count-num" id="users-count">10</span>
                             <span>M</span>
                         </div>
@@ -153,7 +172,7 @@
                     </div>
                     <div class="counter_line"></div>
                     <div class="col l-3 m-6 c-6 counter-number-col">
-                        <div class="col_number">
+                        <div class="col_number border_right">
                             <span class="count-num" id="download-count">23</span>
                             <span>K</span>
                         </div>
@@ -161,7 +180,7 @@
                     </div>
                     <div class="counter_line"></div>
                     <div class="col l-3 m-6 c-6 counter-number-col">
-                        <div class="col_number">
+                        <div class="col_number border_right">
                             <span class="count-num" id="customer-count">9</span>
                             <span>M</span>
                         </div>
@@ -446,7 +465,7 @@
                     <p class="feature-content content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
                 </div>
                 <div class="price__list row text-center">
-                    <div class="price__item price__item1 col l-6 m-12 c-12">
+                    <div class="price__item col l-6 m-12 c-12">
                         <div class="price__item-content">
                             <img src="./img/basic.png" alt="">
                             <h2 class="price__name">BASIC</h2>
@@ -463,7 +482,7 @@
                         </div>
                         <button>Sign Up</button>
                     </div>
-                    <div class="price__item price__item2 col l-6 m-12 c-12">
+                    <div class="price__item col l-6 m-12 c-12">
                         <div class="price__item-content">
                             <img src="./img/premium.png" alt="">
                         <h2 class="price__name">PRO</h2>
@@ -592,6 +611,7 @@
             </div>
         </section>
         <section class="section" id="download">
+            <div class="download__overlay"></div>
             <div class="container grid wide">
                 <div class="row l-12 m-12 c-12 text-center download__content">
                     <h1 class="download-header header">sApp is available for all devices</h1>
@@ -603,7 +623,115 @@
             </div>
         </section>
         <section class="section" id="subcribe">
-
+            <div class="container grid wide">
+                <div class="row l-12 m-12 c-12 text-center">
+                    <h1 class=" header">Subscribe to get updates</h1>
+                    <p class="feature-content content">By subscribing you will get newsleter, promotions adipisicing elit. Architecto beatae, asperiores tempore repudiandae saepe aspernatur unde voluptate sapiente quia ex.</p>
+                    <form action="">
+                        <input class="email__inp long_btn" type="email" placeholder="Enter your email">
+                        <button class="subscribe__btn long_btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="contact">
+            <div class="container grid wide">
+                <div class="row l-12 m-12 c-12 text-center download__header">
+                    <h1 class="feature-header header">Stay Tuned</h1>
+                    <p class="features-content content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
+                </div>
+                <div class="row">
+                    <div class="information l-6">
+                        <p class="contact_content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                        <ul class="contact_list">
+                            <li>
+                                <span class="contact_icon home-icon">
+                                    <i class="fa-solid fa-house-chimney"></i>
+                                </span>
+                                Vestibulum nulla libero, convallis
+                            </li>
+                            <li>
+                                <span class="contact_icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                                123456789
+                            </li>
+                            <li>
+                                <span class="contact_icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                anhaanh2003@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                    <form action="" class="l-6 row contact_form">
+                        <input type="text" class="contact_inp l-12" placeholder="Name">
+                        <input type="text" class="contact_inp l-12" placeholder="Email">
+                        <input type="text" class="contact_inp l-12" placeholder="Subject">
+                        <textarea name="" id="" cols="30" rows="10" class="l-12 contact_inp" placeholder="Message"></textarea>
+                        <button class="contact__btn contact_inp l-12">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="section footer" id="footer">
+            <div class="container grid wide">
+                <div class="footer_top row">
+                    <div class="footer_top--collum l-3 m-6">
+                        <img src="./img/logo-purple.png" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</p>
+                        <div class="social_icons">
+                            <a class="facebook icon_footer" href="#">
+                                <svg class="svg-inline--fa fa-facebook-f fa-w-10" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg><!-- <i class="fab fa-facebook-f"></i> -->
+                                
+                            </a>
+                            <a class="twitter icon_footer" href="#">
+                                <svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><!-- <i class="fab fa-twitter"></i> -->
+                                
+                            </a>
+                            <a class="google-plus icon_footer" href="#">
+                                <svg class="svg-inline--fa fa-google-plus-g fa-w-20" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google-plus-g" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"></path></svg><!-- <i class="fab fa-google-plus-g"></i> -->
+                                
+                            </a>
+                            <a class="vine icon_footer" href="#">
+                                <svg class="svg-inline--fa fa-vine fa-w-12" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="vine" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M384 254.7v52.1c-18.4 4.2-36.9 6.1-52.1 6.1-36.9 77.4-103 143.8-125.1 156.2-14 7.9-27.1 8.4-42.7-.8C137 452 34.2 367.7 0 102.7h74.5C93.2 261.8 139 343.4 189.3 404.5c27.9-27.9 54.8-65.1 75.6-106.9-49.8-25.3-80.1-80.9-80.1-145.6 0-65.6 37.7-115.1 102.2-115.1 114.9 0 106.2 127.9 81.6 181.5 0 0-46.4 9.2-63.5-20.5 3.4-11.3 8.2-30.8 8.2-48.5 0-31.3-11.3-46.6-28.4-46.6-18.2 0-30.8 17.1-30.8 50 .1 79.2 59.4 118.7 129.9 101.9z"></path></svg><!-- <i class="fab fa-vine"></i> -->
+                                
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer_top--collum l-3 m-6 c-12">
+                        <h2>Useful Links</h2>
+                        <ul class="footer_list">
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Services</li>
+                            <li>Blog</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="footer_top--collum l-3 m-6 c-12">
+                        <h2>Product Help</h2>
+                        <ul class="footer_list">
+                            <li>FAQ</li>
+                            <li>Privacy Policy</li>
+                            <li>Support</li>
+                            <li>Terms & Conditions</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="footer_top--collum l-3 m-6 c-12">
+                        <h2>Download</h2>
+                        <span>
+                            <img src="./img/google-play-black.png" alt="">
+                            <img src="./img/app-store-black.png" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="footer_bottom row">
+                    <p>© Copyrights 2022 sApp All rights reserved.</p>
+                    <p>Made with :3 By Themeland</p>
+                </div>
+            </div>
         </section>
     </div>
     <script
