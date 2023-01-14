@@ -65,13 +65,19 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
                                             <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
                                           </svg>
-                                        <li>INNER PAGES
+                                        <li class="li_hover">INNER PAGES
                                             <span class="new-text">New</span>
+                                            <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
                                         </li>
-                                        <li>BLOG PAGES</li>
-                                        <li>BLOG DETAILS</li>
-                                        <li>ACCOUNTS
+                                        <li class="li_hover">BLOG PAGES
+                                            <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
+                                        </li>
+                                        <li class="li_hover">BLOG DETAILS
+                                            <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
+                                        </li>
+                                        <li class="li_hover">ACCOUNTS
                                             <span class="new-text">New</span>
+                                            <i class="fa-sharp fa-solid fa-caret-down" id="fa-caret-down"></i>
                                         </li>
                                         <li>REVIEWS</li>
                                         <li>FAQ</li>
@@ -163,7 +169,7 @@
         <section class="section" id="counter-number">
             <div class=" counter-number__content container grid wide">
                 <div class="row counter-number-row">
-                    <div class="col l-3 m-6 c-6 counter-number-col">
+                    <div class="col l-3 m-3 c-6 counter-number-col">
                         <div class="col_number border_right">
                             <span class="count-num" id="users-count">10</span>
                             <span>M</span>
@@ -171,15 +177,15 @@
                         <p>Users</p>
                     </div>
                     <div class="counter_line"></div>
-                    <div class="col l-3 m-6 c-6 counter-number-col">
-                        <div class="col_number border_right">
+                    <div class="col l-3 m-3 c-6 counter-number-col">
+                        <div class="col_number border_right col_number_download">
                             <span class="count-num" id="download-count">23</span>
                             <span>K</span>
                         </div>
                         <p>Download</p>
                     </div>
                     <div class="counter_line"></div>
-                    <div class="col l-3 m-6 c-6 counter-number-col">
+                    <div class="col l-3 m-3 c-6 counter-number-col">
                         <div class="col_number border_right">
                             <span class="count-num" id="customer-count">9</span>
                             <span>M</span>
@@ -187,7 +193,7 @@
                         <p>Customer</p>
                     </div>
                     <div class="counter_line"></div>
-                    <div class="col l-3 m-6 c-6 counter-number-col">
+                    <div class="col l-3 m-3 c-6 counter-number-col">
                         <div class="col_number">
                             <span class="count-num" id="developer-count">12</span>
                             <span>K</span>
@@ -311,14 +317,14 @@
                     <p class="work__content-header content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
                 </div>
                 <div class="work__steps row">
-                    <div class="work__step work__step1 l-4">
+                    <div class="work__step l-4">
                         <img src="./img/download.png" alt="">
-                        <h2 class="work__step-header">Install the App</h2>
+                        <h2 class="work__step-header work__step1">Install the App</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius saepe, voluptates quis enim incidunt obcaecati?</p>
                     </div>
-                    <div class="work__step work__step2 l-4">
+                    <div class="work__step l-4">
                         <img src="./img/settings.png" alt="">
-                        <h2 class="work__step-header">Setup your profile</h2>
+                        <h2 class="work__step-header work__step2">Setup your profile</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius saepe, voluptates quis enim incidunt obcaecati?</p>
                     </div>
                     <div class="work__step work__step3 l-4">
@@ -541,7 +547,7 @@
             </div>
         </section>
         <section class="section" id="team">
-            <div class="container grid wide">
+            <div class="container grid wide download_container">
                 <div class="row l-12 m-12 c-12 text-center download__header">
                     <h1 class="feature-header header">Our Team Experts</h1>
                     <p class="features-content content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati.</p>

@@ -89,16 +89,24 @@ input {
 button {
     cursor: pointer;
 }
+html {
+    background-color: #00b489;
+}
 body{
     position: relative;
     z-index: -999;
     margin: 0;
+    height: 1500vh;
+    max-width: 100%;
+    background-color: #ffff;
 }
 img{
     height: auto;
     max-width: 100%;
 }
-
+.section{
+    background-color: #ffff;
+}
 .text-center{
     display: flex;
     justify-content: center;
@@ -124,7 +132,7 @@ img{
     width: 100%;
     color: var(--white);
     padding-bottom: 80px;
-    background-color: #3333;
+    background-color: rgba(0, 0, 0, 0, 1);
     background-image: url(../../img/welcome-bg.jpg);
     background-size: cover;
     background-position: center;
@@ -195,7 +203,16 @@ img{
     color: rgba(0, 0, 0, 0.8);
     font-size: 13px;
     font-weight: 700;
-    padding-bottom: 18px;
+    padding-bottom: 18px; 
+}
+.nav__dropdown-menu i{
+    color: rgba(100, 100, 100, .3);
+    position: absolute;
+    right: 24px;
+    transition: 0.3s linear;
+}
+.li_hover:hover i{
+    transform: rotate(-90deg);
 }
 .nav__link-dropdown:hover .nav__dropdown-menu{
     visibility: visible;
@@ -376,6 +393,7 @@ svg{
 }
 #counter-number{
     position: relative;
+    padding-top: 100px;
     text-align: center;
     z-index: -3;
     width: 100%;
@@ -451,6 +469,7 @@ svg{
     height: 2px;
     background-color: #7c4fe0;
     margin: 0 auto;
+    margin-top: 6px;
 }
 .feature-header__line{
     width: 100%;
@@ -466,6 +485,54 @@ svg{
 }
 .features__item{
     margin-top: 40px;
+}
+.box__fully{
+    animation-delay: 0.4s;
+    animation: fully 1s;
+}
+@keyframes fully{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.box__live{
+    animation-delay: 0.2s;
+    animation: live 0.8s;
+}
+@keyframes live{
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.box__secure{
+    animation-delay: 0.4s;
+    animation: secure 1s;
+}
+@keyframes secure{
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+        visibility: visible;
+    }
 }
 .features__item-content{
     transform: translateY(4%);
@@ -618,6 +685,38 @@ svg{
     width: 65px;
     height: auto;
 }
+.work__step1::after{
+    position: absolute;
+    top: 90px;
+    left: 360px;
+    content: '\f054';
+    font-size: 45px;
+    font-weight: 1000;
+    color: var(--white-color);
+    font-family: 'Font Awesome 5 Free'; 
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.work__step2::after{
+    position: absolute;
+    top: 90px;
+    left: 770px;
+    content: '\f054';
+    font-size: 45px;
+    font-weight: 1000;
+    color: var(--white-color);
+    font-family: 'Font Awesome 5 Free'; 
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.work__step:hover .work__step1::after, .work__step:hover .work__step2::after{
+    transform: translateX(25%);
+}
+
 #screenshots{
     position: relative;
     z-index: -10;
@@ -628,10 +727,11 @@ svg{
 .image-slider {
     margin-top: 5%;
     padding-bottom: 1%;
+    margin-bottom: 24px;
 }
 .image {
   height: 444px;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 .image img {
   width: 100%;
@@ -704,7 +804,7 @@ li{
     padding-right: 0 !important;
     height: 390px;
     border: none;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 3px;
     position: relative;
 }
@@ -715,6 +815,9 @@ li{
 }
 .reviews__item{
     justify-content: space-between;
+}
+.review:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 .reviews__content{
     position: absolute;
@@ -762,6 +865,7 @@ li{
     padding: 20px 0px 20px 0px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 .price__item{
     max-width: 375px !important;
 }
@@ -786,10 +890,12 @@ li{
     height: auto;
 }
 .price__item1{
-    animation: price-left 1s linear forwards;  
+    animation-delay: 0.4s;
+    animation: price-left 1s ease-in-out forwards;  
 }
 .price__item2{
-    animation: price-right 1s linear forwards;
+    animation-delay: 0.4s;
+    animation: price-right 1s ease-in-out forwards;
     
 }
 @keyframes price-right{
@@ -843,8 +949,8 @@ li{
     content: "";
     display: block;
     width: 260px;
-    height: 0.5px;
-    background-color: rgba(194, 178, 178, 0.693);
+    height: 0.1px;
+    background-color: rgba(194, 178, 178, 0.4);
     position: absolute;
     left: 12%;
     margin-top: 15px;
@@ -853,8 +959,8 @@ li{
     content: "";
     display: block;
     width: 260px;
-    height: 1px;
-    background-color: rgba(181, 167, 167, 0.712);
+    height: .5px;
+    background-color: rgba(194, 178, 178, 0.4);
     position: absolute;
     left: 12%;
     margin-top: 15px;
@@ -895,9 +1001,7 @@ li{
     border-radius: 15px;
     transition: all 0.3s ease 0s;
 }
-.download__header{
-    margin-bottom: 80px;
-}
+
 .team-image-overlay{
     border-radius: 15px;
     position: absolute;
@@ -935,9 +1039,13 @@ li{
 #download{
     position: relative;
     z-index: -10;
-    padding-top: 100px;
-    padding-bottom: 400px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background: rgba(0, 0, 0, 0) url(../../img/download-bg.jpg) no-repeat fixed center center/cover;
+}
+
+.download__header{
+    margin-bottom: 80px;
 }
 .download__overlay{
     position: absolute;
@@ -967,7 +1075,7 @@ li{
     z-index: -10;
     padding-top: 100px;
     padding-bottom: 8%;
-    background: url(../../img/map.png) no-repeat scroll center center/cover;
+    background: #fff url(../../img/map.png) no-repeat scroll center center/cover;
 }
 .long_btn{
     width: 60%;
@@ -1050,7 +1158,7 @@ textarea{
     color: var(--white);
 }
 #footer{
-    position: relative;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -1098,6 +1206,9 @@ textarea{
 }
 /* Mobile */
 @media only screen and (max-width: 599px){
+    .col_number_download{
+        border-right: none;
+    }
     .home__content{
         flex-direction: column;
     }
@@ -1179,8 +1290,15 @@ textarea{
 }
 /* Mobile and Tablet */
 @media only screen and (max-width: 1023px){
+    .work__step1::after {
+        display: none;
+    }
+    .work__step2::after{
+        display: none;
+    }
     .section{
         padding: 0 5% 3.5% 5%;
+        
     }
     #home{
         padding-bottom: 10%;
@@ -1219,5 +1337,8 @@ textarea{
     }
     .review{
         max-width: 100% !important;
+    }
+    #footer{
+        position: relative;
     }
 }

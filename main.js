@@ -5,18 +5,19 @@ let mybutton = document.getElementById("scrollUp");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	} 
+	else {
+		mybutton.style.display = "none";
+	}
 }
 
 // When the user clicks on the button, scroll to the top of the document
 let offset = 500;
 let duration = 350;
 function topFunction() {
-	window.addEventListener("scrollUp",function(){
+	window.addEventListener("scroll",function(){
 		if ($(this).scrollTop() > offset)
 			$('#scrollUp').fadeIn(duration);
 		else
@@ -111,6 +112,27 @@ document.addEventListener("DOMContentLoaded",function() {
 	})
 
 
+//
+const box = document.getElementsByClassName('features__item');
+window.addEventListener("scroll",function(){
+var x = pageYOffset;
+if(x > 830){
+	box[0].classList.add('box__fully');
+	box[1].classList.add('box__live');
+	box[2].classList.add('box__secure');
+}
+})
+
+
+//
+const price = document.getElementsByClassName('price__item');
+	window.addEventListener("scroll",function(){
+	var x = pageYOffset;
+	if(x >5300){
+		price[0].classList.add('price__item1');
+		price[1].classList.add('price__item2');
+	}
+})
 // slick slider
 $(document).ready(function () {
     $(".image-slider").slick({
@@ -140,4 +162,3 @@ $(document).ready(function () {
       autoplaySpeed: 700,
     });
   });
-
