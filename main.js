@@ -1,15 +1,16 @@
+
 // Get the button
-let mybutton = document.getElementById("scrollUp");
+let scroll_btn = document.getElementById("scrollUp");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		mybutton.style.display = "block";
+		scroll_btn.style.display = "block";
 	} 
 	else {
-		mybutton.style.display = "none";
+		scroll_btn.style.display = "none";
 	}
 }
 
@@ -23,9 +24,9 @@ function topFunction() {
 		else
 			$('#scrollUp').fadeOut(duration);
 		});
-		$('#scrollUp').click(function () {
-		$('body,html').animate({scrollTop: 0}, 500);
-		});
+	$('#scrollUp').click(function () {
+	$('body,html').animate({scrollTop: 0}, 500);
+	});
 }
 
 
@@ -33,54 +34,53 @@ function topFunction() {
 document.addEventListener("DOMContentLoaded",function() {
 var menu = document.querySelectorAll('header.navbar');
 var menu = menu[0];
-    //Truy xuất header
-    var trangthai="duoi400";
+var status="under400";
 window.addEventListener("scroll",function(){
 var x = pageYOffset;
 if(x > 400){
-	if(trangthai == "duoi400")
+	if(status == "under400")
 	{
-		trangthai="tren400";
+		status="over400";
 		menu.classList.add('navbar-sticky');
 	}
 }
 else{
-	if(trangthai=="tren400"){
+	if(status=="over400"){
 		menu.classList.remove('navbar-sticky');
-		trangthai="duoi400";}
+		status="under400";}
 	}
 })
 })
+
 // Hàm tăng số
 function animateNumber(finalNumber, duration = 0, startNumber = 0, callback) {
 	const startTime = performance.now()
 	function updateNumber(currentTime) {
-	  const elapsedTime = currentTime - startTime
-	  if (elapsedTime > duration) {
-		callback(finalNumber)
-	  } else {
-		const rate = elapsedTime / duration
-		const currentNumber = Math.round(rate * finalNumber)
-		callback(currentNumber)
-		requestAnimationFrame(updateNumber)
-	  }
+		const elapsedTime = currentTime - startTime
+		if (elapsedTime > duration) {
+			callback(finalNumber)
+		} else {
+			const rate = elapsedTime / duration
+			const currentNumber = Math.round(rate * finalNumber)
+			callback(currentNumber)
+			requestAnimationFrame(updateNumber)
+		}
 	}
 	requestAnimationFrame(updateNumber)
 }
-  
 
 // Hàm bắt sự kiện scroll tăng số
 document.addEventListener("DOMContentLoaded",function() {
 	var menu = document.querySelectorAll('header.navbar');
 	var menu = menu[0];
 		//Truy xuất header
-		var trangthai="duoi400";
+		var status="under400";
 	window.addEventListener("scroll",function(){
 	var x = pageYOffset;
 	if(x > 200){
-		if(trangthai == "duoi400")
+		if(status == "under400")
 		{
-			trangthai="tren400";
+			status="over400";
 			
 				animateNumber(10, 850, 10, function (number) {
 					const formattedNumber = number.toLocaleString()
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded",function() {
 })
 
 
-//
+// hàm animation features
 const box = document.getElementsByClassName('features__item');
 window.addEventListener("scroll",function(){
 var x = pageYOffset;
@@ -119,7 +119,7 @@ if(x > 830){
 })
 
 
-//
+// hàm animation price
 const price = document.getElementsByClassName('price__item');
 	window.addEventListener("scroll",function(){
 	var x = pageYOffset;

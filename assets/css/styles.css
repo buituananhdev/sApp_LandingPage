@@ -340,6 +340,7 @@ svg{
     text-decoration: none;
     color: rgb(100, 100, 100);
     padding: 8px 0;
+    cursor: pointer;
 }
 .nav__mobile__list hr{
     position: relative;
@@ -358,6 +359,32 @@ svg{
     cursor: pointer;
 }
 .nav__input{
+    display: none;
+}
+.nav__mobile_dropdown-menu{
+    padding: 20px 80px 0 15px;
+    list-style-type: none;
+    border-radius: 2%;
+    background: var(--white);
+    padding-left: 0;
+    display: none;
+}
+.nav__mobile_dropdown-menu li{
+    margin-bottom: 18px;
+    font-size: 13px;
+    color: var(--black);
+    font-weight: 700;
+}
+.home_checkbox, .pages_checkbox{
+    display: none;
+}
+.pages_checkbox:checked ~ .nav__mobile_dropdown-menu{
+    display: block;
+}
+.home_checkbox:checked ~ .nav__mobile_dropdown-menu{
+    display: block;
+}
+.nav__input:checked .nav__mobile_dropdown-menu{
     display: none;
 }
 .nav__input:checked ~ .nav__overlay{
