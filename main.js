@@ -83,33 +83,28 @@ document.addEventListener("DOMContentLoaded",function() {
 			trangthai="tren400";
 			
 				animateNumber(10, 850, 10, function (number) {
-				  const formattedNumber = number.toLocaleString()
-				  document.getElementById('users-count').innerText = formattedNumber
+					const formattedNumber = number.toLocaleString()
+					document.getElementById('users-count').innerText = formattedNumber
 				})
 				
 				animateNumber(23, 850, 10, function (number) {
-				  const formattedNumber = number.toLocaleString()
-				  document.getElementById('download-count').innerText = formattedNumber
+					const formattedNumber = number.toLocaleString()
+					document.getElementById('download-count').innerText = formattedNumber
 				})
 				
 				animateNumber(9, 850, 10, function (number) {
-				  const formattedNumber = number.toLocaleString()
-				  document.getElementById('customer-count').innerText = formattedNumber
+					const formattedNumber = number.toLocaleString()
+					document.getElementById('customer-count').innerText = formattedNumber
 				})
 			
 				animateNumber(12, 850, 10, function (number) {
 					const formattedNumber = number.toLocaleString()
 					document.getElementById('developer-count').innerText = formattedNumber
-				  })
-			  
+				})
 		}
 	}
-	else{
-		if(trangthai=="tren400"){
-			trangthai="duoi400";}
-		}
 	})
-	})
+})
 
 
 //
@@ -136,29 +131,29 @@ const price = document.getElementsByClassName('price__item');
 // slick slider
 $(document).ready(function () {
     $(".image-slider").slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      infinite: true,
-      arrows: false,
-      draggable: true,
-      dots: true,
-      responsive: [
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		infinite: true,
+		arrows: false,
+		draggable: true,
+		dots: true,
+		responsive: [
         {
-          breakpoint: 1025,
-          settings: {
-            slidesToShow: 3,
-          },
+			breakpoint: 1025,
+			settings: {
+            	slidesToShow: 3,
+			},
         },
         {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            arrows: false,
-            infinite: false,
-          },
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				arrows: false,
+				infinite: false,
+			},
         },
-      ],
-      autoplay: true,
-      autoplaySpeed: 700,
+		],
+		autoplay: true,
+		autoplaySpeed: 700,
     });
-  });
+	});
