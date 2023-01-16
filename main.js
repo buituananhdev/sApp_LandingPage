@@ -161,6 +161,7 @@ var checkbox = document.getElementById("nav-mobile-input");
 var navBar = document.querySelectorAll('header.navbar');
 checkbox.addEventListener("change", function() {
     if (this.checked) {
+		document.body.style.overflow = 'hidden'
         navBar.classList.remove("animated");
     } else {
         navBar.classList.add("animated");
