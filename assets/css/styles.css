@@ -1428,7 +1428,7 @@ textarea{
         position: relative;
     }
     body{
-        width: 90vh !important;
+        height: 90vh !important;
     }
     .long_btn {
         width: 97%;
