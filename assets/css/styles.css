@@ -54,7 +54,9 @@
     --primary-bg-color-4: rgb(48, 44, 50);
     --nav-bg-color: #d3d3d3;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .header{
     font-size: 48px;
     font-weight: 600;

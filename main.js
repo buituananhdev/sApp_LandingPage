@@ -74,13 +74,13 @@ document.addEventListener("DOMContentLoaded",function() {
 	var menu = document.querySelectorAll('header.navbar');
 	var menu = menu[0];
 		//Truy xuất header
-		var status="under400";
+	var status="under200";
 	window.addEventListener("scroll",function(){
 	var x = pageYOffset;
 	if(x > 200){
-		if(status == "under400")
+		if(status == "under200")
 		{
-			status="over400";
+			status="over200";
 			
 				animateNumber(10, 850, 10, function (number) {
 					const formattedNumber = number.toLocaleString()
