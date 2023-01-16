@@ -259,7 +259,7 @@ img{
 .navbar-sticky{
     position: fixed;
     background-color: var(--white);
-    z-index: 9999;
+    z-index: -9;
     top: 0;
     left: 0;
     right: 0;
@@ -291,6 +291,9 @@ img{
 }
 svg{
     vertical-align: middle;
+}
+.animated{
+    animation: none;
 }
 .shape-bottom{
     position: absolute;
@@ -330,7 +333,8 @@ svg{
     transform: translateX(100%);
     transition-delay: 1s;
     transition: transform ease-in-out 0.3s;
-    z-index: 3;
+    z-index: 4;
+    overflow-y: scroll;
 }
 .nav__mobile__list{
     list-style-type: none;
@@ -1429,6 +1433,9 @@ textarea{
     }
     body{
         height: 90vh !important;
+    }
+    body::-webkit-scrollbar {
+        display: none;
     }
     .long_btn {
         width: 97%;

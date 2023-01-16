@@ -28,8 +28,6 @@ function topFunction() {
 	$('body,html').animate({scrollTop: 0}, 500);
 	});
 }
-
-
 // Hàm bắt sự kiện scroll hiện navbar 
 document.addEventListener("DOMContentLoaded",function() {
 var menu = document.querySelectorAll('header.navbar');
@@ -156,4 +154,15 @@ $(document).ready(function () {
 		autoplay: true,
 		autoplaySpeed: 700,
     });
-	});
+});
+
+
+var checkbox = document.getElementById("nav-mobile-input");
+var navBar = document.querySelectorAll('header.navbar');
+checkbox.addEventListener("change", function() {
+    if (this.checked) {
+        navBar.classList.remove("animated");
+    } else {
+        navBar.classList.add("animated");
+    }
+});
